@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "586282329506",
+    "firebase_url": "https://barbasnaface.firebaseio.com",
+    "project_id": "barbasnaface",
+    "storage_bucket": "barbasnaface.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:586282329506:android:7daf58554ce0e80b",
+        "android_client_info": {
+          "package_name": "barbasnacara.admin_barbasnaface"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "586282329506-9b0r35al4g1s3vdrp913i7j7h1fkfhr4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBllBUfg2FFF2l0K4LFns2TmP_bz6o18bo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "586282329506-9b0r35al4g1s3vdrp913i7j7h1fkfhr4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:586282329506:android:3eedd89a1550adc2",
+        "android_client_info": {
+          "package_name": "barbasnacara.barbasnaface"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "586282329506-9b0r35al4g1s3vdrp913i7j7h1fkfhr4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBllBUfg2FFF2l0K4LFns2TmP_bz6o18bo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "586282329506-9b0r35al4g1s3vdrp913i7j7h1fkfhr4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
