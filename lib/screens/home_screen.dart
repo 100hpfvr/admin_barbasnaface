@@ -1,6 +1,7 @@
 import 'package:admin_barbasnaface/blocs/orders_bloc.dart';
 import 'package:admin_barbasnaface/blocs/user_bloc.dart';
 import 'package:admin_barbasnaface/tabs/orders_tab.dart';
+import 'package:admin_barbasnaface/tabs/product_tab.dart';
 import 'package:admin_barbasnaface/tabs/users_tab.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
@@ -74,8 +75,8 @@ class _HomeScreenState extends State<HomeScreen> {
               children: <Widget>[
                 UsersTab(),
                 OrdersTab(),
-                Container(
-                  color: Colors.green,
+                ProductsTab(
+
                 )
               ],
             ),
