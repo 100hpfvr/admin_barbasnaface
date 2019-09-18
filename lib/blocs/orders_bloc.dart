@@ -5,10 +5,11 @@ import 'package:rxdart/rxdart.dart';
 class OrdersBloc extends BlocBase {
   final _ordersController = BehaviorSubject<List>();
 
-  List<DocumentSnapshot> _orders = [];
-
   Stream<List> get outOrders => _ordersController.stream;
+
   Firestore _firestore = Firestore.instance;
+
+  List<DocumentSnapshot> _orders = [];
 
   OrdersBloc() {
     _addOrdersListener();
@@ -33,6 +34,8 @@ class OrdersBloc extends BlocBase {
       }
 
       });
+
+      _ordersController.add(_orders);
     });
   }
 
