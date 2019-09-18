@@ -10,8 +10,7 @@ class OrdersTab extends StatelessWidget {
 
     return Padding(
         padding: EdgeInsets.symmetric(vertical: 16),
-        child:
-        StreamBuilder<List>(
+        child: StreamBuilder<List>(
             stream: _ordersBloc.outOrders,
             builder: (context, snapshot) {
               if (!snapshot.hasData)
@@ -27,7 +26,8 @@ class OrdersTab extends StatelessWidget {
                 );
 
               return ListView.builder(
-                  itemCount: snapshot.data.length, itemBuilder: (context, index) {
+                  itemCount: snapshot.data.length,
+                  itemBuilder: (context, index) {
                 return OrderTile(snapshot.data[index]);
               });
             }

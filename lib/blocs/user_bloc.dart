@@ -76,12 +76,17 @@ class UserBloc extends BlocBase {
         DocumentSnapshot order =
         await _firestore.collection("orders").document(d.documentID).get();
         if (order.data == null) continue;
-        money += order.data["total price"];
+        money += order.data["totalPrice"];
       }
       _users[uid].addAll({"money": money, "orders": numOrders});
       _usersController.add(_users.values.toList());
     });
   }
+
+  Map<String, dynamic> getUser(String uid){
+    return _users[uid];
+  }
+
 
   void _unsubscribeOrders(String uid) {
     _users[uid]["subscription"].cancel();

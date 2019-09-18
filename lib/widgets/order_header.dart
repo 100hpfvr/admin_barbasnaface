@@ -1,16 +1,31 @@
+import 'package:admin_barbasnaface/blocs/user_bloc.dart';
+import 'package:bloc_pattern/bloc_pattern.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
+
+
+
 class OrderHeader extends StatelessWidget {
+
+  final DocumentSnapshot order;
+  OrderHeader(this.order);
+
   @override
   Widget build(BuildContext context) {
+
+    final _userBloc = BlocProvider.of<UserBloc>(context);
+
+    final _user = _userBloc.getUser(order.data["clientId"]);
+
     return Row(
       children: <Widget>[
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text("Mateus"),
-              Text ("Rua Flutter LINDA")
+              Text("${_user["name"]}"),
+              Text ("CEP: ${_user["address"]}")
 
             ],
           ),
@@ -19,8 +34,8 @@ class OrderHeader extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
 
-            Text("Preço dos Produtos"),
-            Text ("Preço Total")
+            Text("Produtos: R\$ ${order.data["productsPrice"].toStringAsFixed(2)}"),
+            Text ("Preço Total: ${order.data["totalPrice"].toStringAsFixed(2)}")
 
           ],
         )
